@@ -20,6 +20,8 @@ ENV AWS_DEFAULT_REGION $AWS_DEFAULT_REGION
 
 ENV MONGO_DB_URL $MONGO_DB_URL
 
+RUN python -m pip install --upgrade pip
+
 RUN pip install -r requirements.txt
 
 CMD ["python3", "app.py"]
