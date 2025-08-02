@@ -8,12 +8,12 @@ csv_file_path = "spamham.csv"  # Replace with your actual path
 df = pd.read_csv(csv_file_path)
 
 # 2. Connect to MongoDB
-mongo_uri = os.getenv("MONGODB_URL")  # Load MongoDB URI from .env file
+mongo_uri = "mongodb+srv://SaralTripathi:Saral123@cluster1.phh6sdo.mongodb.net/"  # Load MongoDB URI from .env file
 client = MongoClient(mongo_uri)
 
 # 3. Access DB and Collection
-db = client["pws_projects"]       # Replace with your database name
-collection = db["spam_ham"] # Replace with your collection name
+db = client["PWS_PROJECT"]       # Replace with your database name
+collection = db["SPAM_DETECTION"] # Replace with your collection name
 
 # 4. Upload data
 data = df.to_dict(orient="records")  # Convert DataFrame to list of dicts

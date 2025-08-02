@@ -33,7 +33,7 @@ X_train, X_test, y_train, y_test = train_test_split(
 )
 
 # Load model.yaml
-with open("config\model.yaml", "r") as f:
+with open("config/model.yaml", "r") as f:
     config = yaml.safe_load(f)
 
 grid_config = config["grid_search"]
